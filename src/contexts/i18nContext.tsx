@@ -16,7 +16,16 @@ export function I18nProvider({
   children: React.ReactNode
   dictionary: Dictionary
 }>) {
-  const t = (key: string) => dictionary[key] ?? key
+  const t = (key: string) => {
+    const value = dictionary[key]
+    if (value) return value
+
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`[i18n] Missing key: "${key}"`)
+    }
+
+    return `❗️${key}❗️`
+  }
 
   return <I18nContext.Provider value={{ t }}>{children}</I18nContext.Provider>
 }
