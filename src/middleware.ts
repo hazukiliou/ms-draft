@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+
 import { i18n } from '@/i18n/config'
+
+import type { NextRequest } from 'next/server'
 
 // TODO: 未來根據 headers 決定語系
 function getLocale(): string | undefined {

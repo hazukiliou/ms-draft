@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+
 import { useTranslation } from '@/contexts/i18nContext'
 
 export default function Home() {

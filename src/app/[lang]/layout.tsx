@@ -1,8 +1,9 @@
 import { Geist, Geist_Mono } from 'next/font/google'
+
+import { I18nProvider } from '@/contexts/i18nContext'
 import { i18n } from '@/i18n/config'
 import { isLocale } from '@/i18n/utils'
 import { getDictionary } from '@/lib/getDictionary'
-import { I18nProvider } from '@/contexts/i18nContext'
 import '@/styles/globals.css'
 
 const geistSans = Geist({
