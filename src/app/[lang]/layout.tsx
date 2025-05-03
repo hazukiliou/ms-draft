@@ -1,10 +1,12 @@
+import '@/styles/globals.css'
+
 import { Geist, Geist_Mono } from 'next/font/google'
 
+import Header from '@/components/common/Header'
 import { I18nProvider } from '@/contexts/i18nContext'
 import { i18n } from '@/i18n/config'
 import { isLocale } from '@/i18n/utils'
 import { getDictionary } from '@/lib/getDictionary'
-import '@/styles/globals.css'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -30,9 +32,8 @@ export default async function RootLayout({
   return (
     <I18nProvider dictionary={dictionary}>
       <html lang={validLang}>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <Header locale={validLang} />
           {children}
         </body>
       </html>
