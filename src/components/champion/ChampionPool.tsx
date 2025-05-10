@@ -1,3 +1,5 @@
+import ChampionGrid from '@/components/champion/ChampionGrid'
+
 export default function ChampionPool() {
-  return <div className="rounded-md bg-slate-100"></div>
+  return <ChampionGrid />
 }
