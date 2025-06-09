@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
+import ImagePlaceholder from '@/components/common/ImagePlaceholder'
+
 interface ChampionImageProps {
   src?: string
   alt: string
@@ -11,9 +13,9 @@ export default function ChampionImage({ src, alt }: ChampionImageProps) {
   const [valid, setValid] = useState(false)
 
   return (
-    <div className="relative flex aspect-square w-full items-center justify-center rounded bg-zinc-700 object-cover text-xs text-zinc-400">
+    <div className="relative aspect-square w-full overflow-hidden rounded">
       {!src || !valid ? (
-        'No Image'
+        <ImagePlaceholder>No Image</ImagePlaceholder>
       ) : (
         <Image
           fill
