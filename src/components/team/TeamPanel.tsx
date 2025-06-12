@@ -1,3 +1,4 @@
+import BanList from '@/components/team/BanList'
 import PickList from '@/components/team/PickList'
 
 export default function TeamPanel({ side }: { side: 'blue' | 'red' }) {
@@ -5,8 +6,10 @@ export default function TeamPanel({ side }: { side: 'blue' | 'red' }) {
 
   return (
     <div className={`${bg} h-full rounded-md p-4 text-center`}>
-      {side === 'blue' ? '🔵' : '🔴'}
-      <PickList side={side} />
+      <div className="flex flex-1 flex-col justify-between gap-4">
+        <PickList side={side} />
+        <BanList side={side} />
+      </div>
     </div>
   )
 }

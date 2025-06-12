@@ -14,7 +14,7 @@ const fakePickData = [
 
 export default function PickList({ side }: PickListProps) {
   return (
-    <div className="grid gap-2">
+    <div className="grid min-w-0 grid-cols-1 gap-2">
       {
         // TODO: 待處理邏輯後移除假資料
         fakePickData.map((champ, index) => (

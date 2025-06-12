@@ -12,7 +12,7 @@ export default function PickItem({ championId = null }: PickItemProps) {
   const champion = championId ? allChampions.find((c) => c.id === championId) : null
 
   return (
-    <div className="flex items-center gap-3 rounded bg-zinc-800 px-3 py-2 text-sm text-zinc-100 shadow-sm">
+    <div className="flex items-center gap-3 overflow-hidden rounded bg-zinc-800 px-3 py-2 text-sm text-zinc-100 shadow-sm">
       <div className="h-12 w-12 shrink-0">
         {champion ? (
           <ChampionImage src={champion.imageUrl} alt={champion.name} />
