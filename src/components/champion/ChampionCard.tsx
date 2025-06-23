@@ -8,7 +8,7 @@ interface ChampionCardProps {
 export default function ChampionCard({ champion }: ChampionCardProps) {
   return (
     <div className="rounded-lg bg-zinc-800 p-3 text-center text-sm text-zinc-100">
-      <ChampionImage src={champion.imageUrl} alt={champion.name} />
+      <ChampionImage id={champion.id} alt={champion.name} />
       {champion.name}
     </div>
   )
