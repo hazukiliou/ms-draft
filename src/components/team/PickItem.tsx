@@ -1,21 +1,22 @@
 import ChampionImage from '@/components/common/ChampionImage'
 import ImagePlaceholder from '@/components/common/ImagePlaceholder'
 import { useChampionData } from '@/hooks/useChampionData'
+import { getChampionById } from '@/lib/getChampionById'
 import type { Champion } from '@/types/champion'
 
 interface PickItemProps {
-  championId?: Champion['id'] | null
+  championId?: Champion['id']
 }
 
-export default function PickItem({ championId = null }: PickItemProps) {
+export default function PickItem({ championId }: PickItemProps) {
   const allChampions = useChampionData()
-  const champion = championId ? allChampions.find((c) => c.id === championId) : null
+  const champion = getChampionById(allChampions, championId)
 
   return (
     <div className="flex items-center gap-3 overflow-hidden rounded bg-zinc-800 px-3 py-2 text-sm text-zinc-100 shadow-sm">
       <div className="h-12 w-12 shrink-0">
         {champion ? (
-          <ChampionImage src={champion.imageUrl} alt={champion.name} />
+          <ChampionImage id={champion.id} alt={champion.name} />
         ) : (
           <ImagePlaceholder>No Pick</ImagePlaceholder>
         )}

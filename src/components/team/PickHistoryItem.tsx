@@ -14,12 +14,12 @@ export default function PickHistoryItem({ game, bluePick, redPick }: PickHistory
       <div className="flex justify-between gap-2">
         <div className="grid grid-cols-5 gap-1">
           {bluePick.map((id) => (
-            <ChampionImage key={id} src={id} alt={id} />
+            <ChampionImage key={id} id={id} />
           ))}
         </div>
         <div className="grid grid-cols-5 gap-1">
           {redPick.map((id) => (
-            <ChampionImage key={id} src={id} alt={id} />
+            <ChampionImage key={id} id={id} />
           ))}
         </div>
       </div>

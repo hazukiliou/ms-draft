@@ -6,9 +6,9 @@ interface BanListProps {
 const fakeBanData = [
   { id: 'Ahri', side: 'blue' },
   { id: 'Garen', side: 'blue' },
-  { id: null, side: 'blue' },
-  { id: null, side: 'blue' },
-  { id: null, side: 'blue' },
+  { id: undefined, side: 'blue' },
+  { id: undefined, side: 'blue' },
+  { id: undefined, side: 'blue' },
   // ...
 ]
 
