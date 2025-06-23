@@ -6,6 +6,7 @@
 ## 🔧 Tech Stack
 
 - [Next.js 15](https://nextjs.org/)（App Router）
+- [React 19](https://react.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [pnpm](https://pnpm.io/)
@@ -14,7 +15,8 @@
 ## 📦 Progress
 
 - `v0.1.0`：多語系架構與切換功能完成
-- `v0.2.0`：畫面雛形建構中，開始資料渲染（進行中）
+- `v0.2.0`：畫面雛形建構，初步資料渲染
+- `v0.3.0`：選角流程可操作，進入互動階段（進行中）
 
 ## 🚀 Getting Started
 
